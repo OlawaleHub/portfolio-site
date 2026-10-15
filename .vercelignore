@@ -1,0 +1,14 @@
+# Build helpers — not part of the published site
+_build/
+README.md
+*.md
+
+# Local tooling
+.tools/
+node_modules/
+.vercel/
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini

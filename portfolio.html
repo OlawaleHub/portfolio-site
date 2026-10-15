@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio — Soliu Quadri</title>
+<meta name="description" content="Case studies across web, mobile and on-chain work by Soliu Quadri: an offline-first emergency PWA, a no-code medical publishing platform, Ethereum governance contracts and production client websites.">
+<meta name="author" content="Soliu Olawale Quadri">
+<meta name="theme-color" content="#f0f0f0">
+<meta property="og:title" content="Portfolio — Soliu Quadri">
+<meta property="og:description" content="Case studies across web, mobile and on-chain work.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2314130f'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='54' fill='%23f0f0f0' text-anchor='middle'%3ESQ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aboreto&family=Figtree:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>
+(function(){try{var t=localStorage.getItem("sq-theme");if(t==="dark"||(!t&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.setAttribute("data-theme","dark");}}catch(e){}})();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="shell">
+  <header class="masthead-bar">
+    <div class="page">
+      <div class="bar">
+        <a href="index.html" class="wordmark">Soliu Quadri<span>.</span></a>
+        <nav class="nav" aria-label="Primary">
+          <a href="about.html" class="nav-item">About</a>
+          <a href="portfolio.html" class="nav-item">Portfolio</a>
+          <a href="notebook.html" class="nav-item">Notebook</a>
+          <a href="contact.html" class="nav-item">Contact</a>
+        </nav>
+        <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode"><span aria-hidden="true">☾</span></button>
+        <button class="burger" aria-expanded="false" aria-controls="drawer">
+          <span class="sr-only">Open menu</span>
+          <span class="bar-line" aria-hidden="true"></span>
+          <span class="bar-line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="drawer" class="drawer" inert aria-hidden="true">
+    <div class="page">
+      <a href="index.html" class="drawer-link">Home</a>
+      <a href="about.html" class="drawer-link">About</a>
+      <a href="portfolio.html" class="drawer-link">Portfolio</a>
+      <a href="notebook.html" class="drawer-link">Notebook</a>
+      <a href="contact.html" class="drawer-link">Contact</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="page">
+
+      <section class="masthead">
+        <p class="headnote label">Selected work</p>
+        <h1 class="display">Portfolio</h1>
+        <p class="lead masthead-lead mt-6">Six projects across web, cross-platform mobile and on-chain engineering — what the problem was, what I built, and what I would change next time.</p>
+      </section>
+
+      <!-- ================= (01) case studies ================= -->
+      <section class="section" id="case-studies">
+        <header class="section-head">
+          <p class="label label-ink">(01) — Case studies</p>
+          <p class="label">Web · Mobile · On-chain</p>
+        </header>
+
+        <div class="index">
+          <a href="work/lagos-emergency.html" class="index-row">
+            <span class="index-num">01</span>
+            <span class="index-name">Lagos Emergency</span>
+            <span class="case-lines">
+              <span class="case-line">A one-tap emergency reporting PWA for Lagos. Tap Police, Fire or Medical and it routes you to the nearest facility.</span>
+              <span class="case-line">Works with zero internet: the alert is queued in IndexedDB and replayed by a service worker when the connection returns.</span>
+              <span class="case-line">GPS on tap, with a 20-LGA dropdown fallback for when location is unavailable.</span>
+            </span>
+            <span class="index-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="work/ifeoluwa-medical.html" class="index-row">
+            <span class="index-num">02</span>
+            <span class="index-name">Ifeoluwa Medical</span>
+            <span class="case-lines">
+              <span class="case-line">A publishing platform for a medical professional who writes for patients, not for other clinicians.</span>
+              <span class="case-line">An embedded Sanity Studio means the author publishes without a developer, while 60-second revalidation keeps the public site static and fast.</span>
+              <span class="case-line">Deliberately plain: evidence-based, no jargon, and a standing disclaimer that it is not medical advice.</span>
+            </span>
+            <span class="index-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="work/token-gated-voting.html" class="index-row">
+            <span class="index-num">03</span>
+            <span class="index-name">Token-Gated Voting</span>
+            <span class="case-lines">
+              <span class="case-line">A governance platform on Ethereum where influence is gated behind an ERC-20 token, built on OpenZeppelin's Governor framework.</span>
+              <span class="case-line">Paid voting with automatic refunds on cancellation, a 4% quorum, timelock execution and emergency pause.</span>
+              <span class="case-line">Vote weight is snapshotted from a past block, which is what makes flash-loan vote buying pointless.</span>
+            </span>
+            <span class="index-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="work/refcrypt-labs.html" class="index-row">
+            <span class="index-num">04</span>
+            <span class="index-name">Refcrypt Labs Website</span>
+            <span class="case-lines">
+              <span class="case-line">The public platform for the studio I work at in Lekki — a production client build I own and maintain.</span>
+              <span class="case-line">Marketing surface, service architecture, CMS and on-page SEO for a nine-service blockchain and software practice.</span>
+              <span class="case-line">Source is confidential under NDA, so this page documents the approach rather than the code.</span>
+            </span>
+            <span class="index-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="work/portfolio-builds.html" class="index-row">
+            <span class="index-num">05</span>
+            <span class="index-name">Client Portfolio Builds</span>
+            <span class="case-lines">
+              <span class="case-line">Three portfolio sites built for a COO and marketing strategist, shipped to live domains on Vercel.</span>
+              <span class="case-line">Fast, static, mobile-first, and designed to be edited by the owner rather than by me.</span>
+            </span>
+            <span class="index-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="work/mobile-flutter.html" class="index-row">
+            <span class="index-num">06</span>
+            <span class="index-name">Cross-platform Mobile with Flutter</span>
+            <span class="case-lines">
+              <span class="case-line">Ongoing mobile work in Dart and Flutter: one codebase, Android and iOS, clean architecture and deliberate state management.</span>
+              <span class="case-line">API integration, local persistence and release builds, maintained as part of my role at Refcrypt Labs.</span>
+            </span>
+            <span class="index-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ================= (02) repositories ================= -->
+      <section class="section" id="repositories">
+        <header class="section-head">
+          <p class="label label-ink">(02) — Open source</p>
+          <p class="label">All public repositories</p>
+        </header>
+
+        <div class="group">
+          <p class="label group-label">Product work</p>
+          <div class="index">
+            <a href="https://github.com/OlawaleHub/lagos-emergency-pwa" target="_blank" rel="noopener" class="index-row">
+              <span class="index-num">01</span>
+              <span class="index-name index-name-sm">lagos-emergency-pwa</span>
+              <span class="index-desc">Next.js 14 · React 18 · Tailwind · service worker</span>
+              <span class="index-meta">JavaScript</span>
+              <span class="index-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://github.com/OlawaleHub/ifeoluwa-medical" target="_blank" rel="noopener" class="index-row">
+              <span class="index-num">02</span>
+              <span class="index-name index-name-sm">ifeoluwa-medical</span>
+              <span class="index-desc">Next.js 14 · Sanity 3 · Portable Text · ISR</span>
+              <span class="index-meta">JavaScript</span>
+              <span class="index-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://github.com/OlawaleHub/token-gated-voting" target="_blank" rel="noopener" class="index-row">
+              <span class="index-num">03</span>
+              <span class="index-name index-name-sm">token-gated-voting</span>
+              <span class="index-desc">Solidity · Hardhat · OpenZeppelin Governor · ERC-20</span>
+              <span class="index-meta">Solidity</span>
+              <span class="index-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://github.com/OlawaleHub/Portfolio" target="_blank" rel="noopener" class="index-row">
+              <span class="index-num">04</span>
+              <span class="index-name index-name-sm">Portfolio</span>
+              <span class="index-desc">The source of the previous version of this site</span>
+              <span class="index-meta">JavaScript</span>
+              <span class="index-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="group">
+          <p class="label group-label">Client builds</p>
+          <div class="index">
+            <a href="https://rufai-portfolio.vercel.app" target="_blank" rel="noopener" class="index-row">
+              <span class="index-num">01</span>
+              <span class="index-name index-name-sm">rufai-portfolio</span>
+              <span class="index-desc">Portfolio for a COO and marketing strategist</span>
+              <span class="index-meta">JavaScript</span>
+              <span class="index-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://github.com/OlawaleHub/rahmon-portfolio" target="_blank" rel="noopener" class="index-row">
+              <span class="index-num">02</span>
+              <span class="index-name index-name-sm">rahmon-portfolio</span>
+              <span class="index-desc">Portfolio site build</span>
+              <span class="index-meta">HTML</span>
+              <span class="index-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://github.com/OlawaleHub/kasdit" target="_blank" rel="noopener" class="index-row">
+              <span class="index-num">03</span>
+              <span class="index-name index-name-sm">kasdit</span>
+              <span class="index-desc">Marketing site for a crypto audit service</span>
+              <span class="index-meta">HTML</span>
+              <span class="index-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="group">
+          <p class="label group-label">Practice &amp; learning</p>
+          <div class="index">
+            <a href="https://github.com/OlawaleHub/extension-manager" target="_blank" rel="noopener" class="index-row">
+              <span class="index-num">01</span>
+              <span class="index-name index-name-sm">extension-manager</span>
+              <span class="index-desc">Frontend Mentor challenge build</span>
+              <span class="index-meta">HTML</span>
+              <span class="index-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://nft-preview-card-component-main-lemon-nine.vercel.app" target="_blank" rel="noopener" class="index-row">
+              <span class="index-num">02</span>
+              <span class="index-name index-name-sm">nft-preview-card-component-main</span>
+              <span class="index-desc">Frontend Mentor challenge, deployed on Vercel</span>
+              <span class="index-meta">HTML</span>
+              <span class="index-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://github.com/OlawaleHub/happybirthday" target="_blank" rel="noopener" class="index-row">
+              <span class="index-num">03</span>
+              <span class="index-name index-name-sm">happybirthday</span>
+              <span class="index-desc">A small personal site built for family</span>
+              <span class="index-meta">HTML</span>
+              <span class="index-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <p class="more"><a href="https://github.com/OlawaleHub?tab=repositories" class="link" target="_blank" rel="noopener">All 21 repositories on GitHub ↗</a></p>
+      </section>
+
+      <!-- ================= (03) capabilities ================= -->
+      <section class="section" id="capabilities">
+        <header class="section-head">
+          <p class="label label-ink">(03) — Capabilities</p>
+          <p class="label">What the work covers</p>
+        </header>
+
+        <div class="skill-groups">
+          <div>
+            <p class="label skill-head">Web platforms</p>
+            <ul class="skill-list">
+              <li>Next.js App Router</li><li>React</li><li>Tailwind CSS</li><li>SEO</li><li>Core Web Vitals</li>
+            </ul>
+          </div>
+          <div>
+            <p class="label skill-head">Mobile</p>
+            <ul class="skill-list">
+              <li>Flutter</li><li>Dart</li><li>State management</li><li>Release builds</li>
+            </ul>
+          </div>
+          <div>
+            <p class="label skill-head">Offline &amp; resilience</p>
+            <ul class="skill-list">
+              <li>Service workers</li><li>IndexedDB</li><li>Background Sync</li><li>PWA install</li>
+            </ul>
+          </div>
+          <div>
+            <p class="label skill-head">Content systems</p>
+            <ul class="skill-list">
+              <li>Sanity CMS</li><li>Portable Text</li><li>ISR</li><li>No-code editing</li>
+            </ul>
+          </div>
+          <div>
+            <p class="label skill-head">On-chain</p>
+            <ul class="skill-list">
+              <li>Solidity</li><li>OpenZeppelin</li><li>Hardhat</li><li>Access control</li>
+            </ul>
+          </div>
+          <div>
+            <p class="label skill-head">Delivery</p>
+            <ul class="skill-list">
+              <li>Git &amp; GitHub</li><li>Vercel</li><li>Analytics feedback</li><li>Technical documentation</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <header class="section-head">
+          <p class="label label-ink">(04) — Next</p>
+        </header>
+        <div class="grid grid-rows">
+          <div class="c-7 start-5">
+            <h2 class="title">Have something<br>in mind?</h2>
+            <p class="lead mt-6">I am open to full-time roles and selective freelance work in web and mobile engineering.</p>
+            <p class="mt-8"><a class="btn" href="contact.html">Get in touch</a></p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="colophon">
+    <div class="page">
+      <p class="signoff">Soliu Quadri</p>
+      <div class="grid mt-8">
+        <div class="c-4">
+          <p class="label">Soliu Quadri</p>
+          <p class="colophon-note">Software engineer — web &amp; mobile. Lagos, Nigeria.</p>
+          <p class="colophon-note">© <span data-year>2026</span></p>
+        </div>
+        <div class="c-4">
+          <p class="label">Contact</p>
+          <ul class="colophon-list">
+            <li><a class="link" href="mailto:quadrisoliu14@gmail.com">quadrisoliu14@gmail.com</a></li>
+            <li><a class="link" href="tel:+2347054355120">+234 705 435 5120</a></li>
+          </ul>
+        </div>
+        <div class="c-4">
+          <p class="label">Elsewhere</p>
+          <ul class="colophon-list">
+            <li><a class="link" href="https://github.com/OlawaleHub" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a class="link" href="https://www.linkedin.com/in/quadri-soliu-9448bb1a6" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a class="link" href="https://twitter.com/Sulphate04" target="_blank" rel="noopener">X / Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

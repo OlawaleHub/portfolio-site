@@ -1,0 +1,23 @@
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Vercel / Netlify local state
+.vercel/
+.netlify/
+
+# Local tooling and scratch
+node_modules/
+.tools/
+__pycache__/
+*.pyc
+_scratch_*
+
+# Keep these — they are part of the deployable site
+!vercel.json

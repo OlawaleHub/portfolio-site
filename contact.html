@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Soliu Quadri</title>
+<meta name="description" content="Get in touch with Soliu Quadri, software engineer in Lagos — available for full-time roles and selective freelance work in web and mobile engineering.">
+<meta name="author" content="Soliu Olawale Quadri">
+<meta name="theme-color" content="#f0f0f0">
+<meta property="og:title" content="Contact — Soliu Quadri">
+<meta property="og:description" content="Available for full-time roles and selective freelance work.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2314130f'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='54' fill='%23f0f0f0' text-anchor='middle'%3ESQ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aboreto&family=Figtree:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>
+(function(){try{var t=localStorage.getItem("sq-theme");if(t==="dark"||(!t&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.setAttribute("data-theme","dark");}}catch(e){}})();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="shell">
+  <header class="masthead-bar">
+    <div class="page">
+      <div class="bar">
+        <a href="index.html" class="wordmark">Soliu Quadri<span>.</span></a>
+        <nav class="nav" aria-label="Primary">
+          <a href="about.html" class="nav-item">About</a>
+          <a href="portfolio.html" class="nav-item">Portfolio</a>
+          <a href="notebook.html" class="nav-item">Notebook</a>
+          <a href="contact.html" class="nav-item">Contact</a>
+        </nav>
+        <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode"><span aria-hidden="true">☾</span></button>
+        <button class="burger" aria-expanded="false" aria-controls="drawer">
+          <span class="sr-only">Open menu</span>
+          <span class="bar-line" aria-hidden="true"></span>
+          <span class="bar-line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="drawer" class="drawer" inert aria-hidden="true">
+    <div class="page">
+      <a href="index.html" class="drawer-link">Home</a>
+      <a href="about.html" class="drawer-link">About</a>
+      <a href="portfolio.html" class="drawer-link">Portfolio</a>
+      <a href="notebook.html" class="drawer-link">Notebook</a>
+      <a href="contact.html" class="drawer-link">Contact</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="page">
+
+      <section class="masthead">
+        <p class="headnote label">Say hello</p>
+        <h1 class="display">Contact</h1>
+        <p class="lead masthead-lead mt-6">A role to fill, a project to build, or a question about something on this site — the inbox is open.</p>
+      </section>
+
+      <!-- ================= (01) details ================= -->
+      <section class="section">
+        <header class="section-head">
+          <p class="label label-ink">(01) — Direct</p>
+          <p class="label">Usually replies within a day</p>
+        </header>
+        <h2 class="title section-title">Where to<br>find me</h2>
+
+        <dl class="contact-grid">
+          <div class="contact-cell">
+            <dt class="label">Email</dt>
+            <dd><a class="link" href="mailto:quadrisoliu14@gmail.com">quadrisoliu14@gmail.com</a></dd>
+          </div>
+          <div class="contact-cell">
+            <dt class="label">Phone</dt>
+            <dd><a class="link" href="tel:+2347054355120">+234 705 435 5120</a></dd>
+          </div>
+          <div class="contact-cell">
+            <dt class="label">Location</dt>
+            <dd>Lagos, Nigeria</dd>
+          </div>
+          <div class="contact-cell">
+            <dt class="label">Working hours</dt>
+            <dd>WAT (UTC+1)</dd>
+          </div>
+        </dl>
+
+        <p class="available mt-8"><span class="dot" aria-hidden="true"></span> Available for new projects</p>
+      </section>
+
+      <!-- ================= (02) form ================= -->
+      <section class="section">
+        <header class="section-head">
+          <p class="label label-ink">(02) — Message</p>
+          <p class="label">Opens your email client</p>
+        </header>
+        <h2 class="title section-title">Send a<br>message</h2>
+
+        <div class="grid">
+          <div class="c-7">
+            <form id="contact-form" data-mailto="quadrisoliu14@gmail.com" novalidate>
+              <div class="form-field">
+                <label class="label" for="name">Your name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+              </div>
+              <div class="form-field">
+                <label class="label" for="email">Your email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+              </div>
+              <div class="form-field">
+                <label class="label" for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+              </div>
+              <p><button type="submit" class="btn">Send message</button></p>
+              <p class="caption mt-3" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+            <p class="caption mt-3">This form has no backend — it opens your own email client with the message pre-filled, so nothing is sent to a third party.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= (03) elsewhere ================= -->
+      <section class="section">
+        <header class="section-head">
+          <p class="label label-ink">(03) — Elsewhere</p>
+        </header>
+        <h2 class="title section-title">On the<br>internet</h2>
+
+        <div class="index">
+          <a href="https://github.com/OlawaleHub" target="_blank" rel="noopener" class="index-row">
+            <span class="index-num">01</span>
+            <span class="index-name index-name-sm">GitHub</span>
+            <span class="index-desc">21 public repositories — source for all six case studies</span>
+            <span class="index-meta">@OlawaleHub</span>
+            <span class="index-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://www.linkedin.com/in/quadri-soliu-9448bb1a6" target="_blank" rel="noopener" class="index-row">
+            <span class="index-num">02</span>
+            <span class="index-name index-name-sm">LinkedIn</span>
+            <span class="index-desc">Professional history and roles</span>
+            <span class="index-meta">Soliu Quadri</span>
+            <span class="index-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://twitter.com/Sulphate04" target="_blank" rel="noopener" class="index-row">
+            <span class="index-num">03</span>
+            <span class="index-name index-name-sm">X / Twitter</span>
+            <span class="index-desc">Where I think out loud about the work</span>
+            <span class="index-meta">@Sulphate04</span>
+            <span class="index-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ================= (04) faq ================= -->
+      <section class="section">
+        <header class="section-head">
+          <p class="label label-ink">(04) — Before you write</p>
+        </header>
+        <h2 class="title section-title">Common<br>questions</h2>
+
+        <div class="grid grid-rows">
+          <div class="c-7 start-5 prose">
+            <h3>Are you open to full-time roles?</h3>
+            <p>Yes — particularly web or mobile engineering roles where the product is used by people on constrained devices or unreliable networks. I am based in Lagos and have worked remotely since 2022.</p>
+
+            <h3>Do you do freelance work?</h3>
+            <p>Selectively. I take on projects where the scope is clear and where I can own the build end to end. Send the brief and I will tell you honestly whether I am the right person.</p>
+
+            <h3>Can I see your CV?</h3>
+            <p>Of course. <a href="mailto:quadrisoliu14@gmail.com?subject=CV%20request">Email me</a> and I will send the current version, tailored to the role if you tell me what it is.</p>
+
+            <h3>Is the Refcrypt Labs source available?</h3>
+            <p>No — it is client work under an NDA. The <a href="work/refcrypt-labs.html">case study</a> describes the architecture and decisions instead, and I am happy to talk through specifics in a call.</p>
+
+            <h3>What are you working on right now?</h3>
+            <p>The <a href="notebook.html">notebook</a> page is where I keep that current.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="colophon">
+    <div class="page">
+      <p class="signoff">Soliu Quadri</p>
+      <div class="grid mt-8">
+        <div class="c-4">
+          <p class="label">Soliu Quadri</p>
+          <p class="colophon-note">Software engineer — web &amp; mobile. Lagos, Nigeria.</p>
+          <p class="colophon-note">© <span data-year>2026</span></p>
+        </div>
+        <div class="c-4">
+          <p class="label">Contact</p>
+          <ul class="colophon-list">
+            <li><a class="link" href="mailto:quadrisoliu14@gmail.com">quadrisoliu14@gmail.com</a></li>
+            <li><a class="link" href="tel:+2347054355120">+234 705 435 5120</a></li>
+          </ul>
+        </div>
+        <div class="c-4">
+          <p class="label">Elsewhere</p>
+          <ul class="colophon-list">
+            <li><a class="link" href="https://github.com/OlawaleHub" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a class="link" href="https://www.linkedin.com/in/quadri-soliu-9448bb1a6" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a class="link" href="https://twitter.com/Sulphate04" target="_blank" rel="noopener">X / Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

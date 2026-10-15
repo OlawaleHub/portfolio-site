@@ -1,0 +1,24 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" width="1600" height="400">
+  <defs>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.2" fill="#14130f" opacity="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="400" fill="#f0f0f0"/>
+  <rect width="1600" height="400" fill="url(#dots)"/>
+  <circle cx="1280" cy="70" r="190" fill="#8f0a30" opacity="0.16"/>
+  <circle cx="240" cy="340" r="220" fill="#14130f" opacity="0.13"/>
+  <path d="M0 320 L1600 120" stroke="#8f0a30" stroke-width="2" opacity="0.45"/>
+  <path d="M0 360 L1600 160" stroke="#14130f" stroke-width="1" opacity="0.38"/>
+  <path d="M900 400 L1080 0" stroke="#8f0a30" stroke-width="1" opacity="0.3"/>
+  <path d="M1180 400 L1360 0" stroke="#14130f" stroke-width="1" opacity="0.28"/>
+  <rect x="1340" y="240" width="150" height="150" fill="none" stroke="#14130f" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="120" cy="80" r="40" fill="none" stroke="#14130f" stroke-width="1.5" opacity="0.55"/>
+  <circle cx="120" cy="80" r="18" fill="#8f0a30" opacity="0.32"/>
+  <g stroke="#14130f" stroke-width="1" opacity="0.22">
+    <line x1="400" y1="0" x2="400" y2="400"/>
+    <line x1="800" y1="0" x2="800" y2="400"/>
+    <line x1="1200" y1="0" x2="1200" y2="400"/>
+  </g>
+  <rect x="0" y="0" width="1600" height="6" fill="#8f0a30" opacity="0.85"/>
+</svg>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lagos Emergency — Soliu Quadri</title>
+<meta name="description" content="A one-tap, offline-first emergency reporting PWA for Lagos. Next.js, IndexedDB, service workers and background sync.">
+<meta name="author" content="Soliu Olawale Quadri">
+<meta name="theme-color" content="#f0f0f0">
+<meta property="og:title" content="Lagos Emergency — Soliu Quadri">
+<meta property="og:description" content="A one-tap, offline-first emergency reporting PWA for Lagos. Next.js, IndexedDB, service workers and background sync.">
+<meta property="og:type" content="article">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2314130f'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='54' fill='%23f0f0f0' text-anchor='middle'%3ESQ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aboreto&family=Figtree:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script>
+(function(){try{var t=localStorage.getItem("sq-theme");if(t==="dark"||(!t&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.setAttribute("data-theme","dark");}}catch(e){}})();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="shell">
+  <header class="masthead-bar">
+    <div class="page">
+      <div class="bar">
+        <a href="../index.html" class="wordmark">Soliu Quadri<span>.</span></a>
+        <nav class="nav" aria-label="Primary">
+          <a href="../about.html" class="nav-item">About</a>
+          <a href="../portfolio.html" class="nav-item">Portfolio</a>
+          <a href="../notebook.html" class="nav-item">Notebook</a>
+          <a href="../contact.html" class="nav-item">Contact</a>
+        </nav>
+        <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode"><span aria-hidden="true">&#9789;</span></button>
+        <button class="burger" aria-expanded="false" aria-controls="drawer">
+          <span class="sr-only">Open menu</span>
+          <span class="bar-line" aria-hidden="true"></span>
+          <span class="bar-line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="drawer" class="drawer" inert aria-hidden="true">
+    <div class="page">
+      <a href="../index.html" class="drawer-link">Home</a>
+      <a href="../about.html" class="drawer-link">About</a>
+      <a href="../portfolio.html" class="drawer-link">Portfolio</a>
+      <a href="../notebook.html" class="drawer-link">Notebook</a>
+      <a href="../contact.html" class="drawer-link">Contact</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="page">
+      <section class="case-head">
+        <div class="folio">
+          <a href="../portfolio.html" class="label label-ink folio-link">&larr; Index</a>
+          <span class="label">Case study 1 / 6</span>
+          <a href="ifeoluwa-medical.html" class="label label-accent folio-link">Next &rarr;</a>
+        </div>
+
+        <figure class="banner">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 400' width='1600' height='400'><defs><pattern id='d' width='22' height='22' patternUnits='userSpaceOnUse'><circle cx='4' cy='4' r='1.2' fill='%2314130f' opacity='0.5'/></pattern></defs><rect width='1600' height='400' fill='%23f0f0f0'/><rect width='1600' height='400' fill='url(%23d)'/><circle cx='1280' cy='70' r='190' fill='%238f0a30' opacity='0.16'/><circle cx='240' cy='340' r='220' fill='%233f6b46' opacity='0.13'/><path d='M0 320 L1600 120' stroke='%238f0a30' stroke-width='2' opacity='0.45'/><path d='M0 360 L1600 160' stroke='%233f6b46' stroke-width='1' opacity='0.38'/><path d='M896 400 L1088 0' stroke='%238f0a30' stroke-width='1' opacity='0.30'/><path d='M1184 400 L1360 0' stroke='%233f6b46' stroke-width='1' opacity='0.28'/><rect x='1344' y='240' width='150' height='150' fill='none' stroke='%2314130f' stroke-width='1.5' opacity='0.4'/><circle cx='120' cy='80' r='40' fill='none' stroke='%233f6b46' stroke-width='1.5' opacity='0.55'/><circle cx='120' cy='80' r='18' fill='%238f0a30' opacity='0.32'/><g stroke='%2314130f' stroke-width='1' opacity='0.22'><line x1='400' y1='0' x2='400' y2='400'/><line x1='800' y1='0' x2='800' y2='400'/><line x1='1200' y1='0' x2='1200' y2='400'/></g><rect x='0' y='0' width='1600' height='6' fill='%238f0a30' opacity='0.85'/></svg>" alt="Abstract artwork in carmine and green representing the Lagos Emergency project" width="1600" height="400">
+        </figure>
+
+        <h1 class="display case-title">
+          <span>Lagos</span>
+          <span>Emergency</span>
+        </h1>
+        <p class="lead case-tagline">Three buttons, no internet required, and a fallback for every point of failure.</p>
+
+        <dl class="credits">
+          <div class="credit-row">
+            <dt class="label">Role</dt>
+            <dd class="credit-value">Front-end engineering &amp; offline architecture</dd>
+          </div>
+          <div class="credit-row">
+            <dt class="label">Scope</dt>
+            <dd class="credit-value">Product design · PWA · Offline storage · Geolocation · Map integration</dd>
+          </div>
+          <div class="credit-row">
+            <dt class="label">Stack</dt>
+            <dd class="credit-value">Next.js 14 · React 18 · Tailwind CSS · Service Worker · IndexedDB · Background Sync · Leaflet &amp; OpenStreetMap · lucide-react</dd>
+          </div>
+          <div class="credit-row">
+            <dt class="label">Links</dt>
+            <dd class="credit-value"><a class="link" href="https://lagos-emergency-pwa.vercel.app/" target="_blank" rel="noopener">Live app &#8599;</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/OlawaleHub/lagos-emergency-pwa" target="_blank" rel="noopener">Source &#8599;</a></dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="glance">
+        <p class="label glance-label">At a glance</p>
+        <div class="data">
+          <div class="data-row">
+            <div class="data-figure">Zero</div>
+            <div class="data-label">Internet required to accept an emergency report</div>
+          </div>
+          <div class="data-row">
+            <div class="data-figure">3</div>
+            <div class="data-label">Colour-coded buttons — Police, Fire, Medical</div>
+          </div>
+          <div class="data-row">
+            <div class="data-figure">20</div>
+            <div class="data-label">Lagos LGAs available for manual fallback routing</div>
+          </div>
+          <div class="data-row">
+            <div class="data-figure">2</div>
+            <div class="data-label">Sync paths — Background Sync plus an online-event replay</div>
+          </div>
+          <div class="data-row">
+            <div class="data-figure">8</div>
+            <div class="data-label">Priority features tracked and delivered</div>
+          </div>
+          <div class="data-row">
+            <div class="data-figure">112 / 767</div>
+            <div class="data-label">Direct-dial numbers surfaced for life-threatening cases</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cs-head">
+          <span class="cs-num label">01</span>
+          <h2 class="cs-title">The brief</h2>
+        </div>
+        <div class="cs-body prose">
+<p>Lagos is a city of roughly twenty million people and a road network that does not forgive hesitation. If you need an ambulance, the sequence is usually: find your phone, work out which number to call, hope you can describe where you are, and hope somebody on the other end can act on that description.</p>
+<p>The premise of this project was narrow on purpose: reduce that sequence to a single tap. Not a directory of emergency services, not a form, not an account. One screen, three buttons, and the app works out the rest.</p>
+<p>It was built under the <a href="https://refcryptlabs.com/" target="_blank" rel="noopener">Refcrypt Labs</a> banner as a public-good project rather than a commercial one, and it is live and installable today.</p>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cs-head">
+          <span class="cs-num label">02</span>
+          <h2 class="cs-title">Why offline-first was non-negotiable</h2>
+        </div>
+        <div class="cs-body prose">
+<p>Every emergency product has the same uncomfortable property: it is needed most at the exact moment the infrastructure around it is failing. Network congestion, a downed mast, a building with no signal — the scenarios where you need help are frequently the scenarios where you have no connection.</p>
+<p>So the app assumes from the first line of code that the request will not reach a server. Tapping a button writes the alert to an <strong>IndexedDB queue</strong> and confirms immediately. The user sees that something happened. Synchronisation then becomes a background problem instead of a blocker.</p>
+<p>The app shell itself is precached by a service worker, so the interface loads with no network at all — there is a dedicated offline fallback route rather than the browser's dinosaur.</p>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cs-head">
+          <span class="cs-num label">03</span>
+          <h2 class="cs-title">How the queue actually works</h2>
+        </div>
+        <div class="cs-body prose">
+<p>Two mechanisms drain the queue, because browser support is not uniform:</p>
+<ul>
+<li><strong>Background Sync</strong> — the service worker listens for the <code>sync</code> event and replays queued alerts when the browser decides the connection is usable again.</li>
+<li><strong>The <code>online</code> event</strong> — a client-side listener does the same replay as a fallback for browsers without Background Sync support.</li>
+</ul>
+<p>There is a <code>/queue</code> screen where the user can see exactly what is pending and trigger a manual sync, and an <code>/offline</code> shell so the app degrades visibly rather than silently.</p>
+<p>The test I insist on: turn the network off properly — not throttled, off — tap a button, confirm the alert appears in the queue, then restore the connection and watch the queue drain. If you have not watched it empty, you have not tested it.</p>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cs-head">
+          <span class="cs-num label">04</span>
+          <h2 class="cs-title">Routing when the sensor says no</h2>
+        </div>
+        <div class="cs-body prose">
+<p>Geolocation is a permission prompt, and permission prompts get denied. On tap the app requests the current position with a timeout; if the user refuses, or the fix fails, or the API is unavailable, the app does not stop.</p>
+<p>It falls back to a dropdown of all <strong>twenty Lagos local government areas</strong>. Choosing one resolves the nearest police, fire and medical facilities for that area by distance, using haversine calculations against a local facility list — no API key, no server round trip, which matters precisely because the network is the thing that failed.</p>
+<p>Facilities can also be found proactively on the <code>/locate</code> screen, which plots them on a Leaflet map with OpenStreetMap tiles. There is a reason that screen exists outside an emergency: nobody wants to discover a product's flaws while panicking.</p>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cs-head">
+          <span class="cs-num label">05</span>
+          <h2 class="cs-title">Accessibility and the small screens</h2>
+        </div>
+        <div class="cs-body prose">
+<p>The entire flow is designed for one-handed use under stress. Buttons are large, colour-coded and labelled with text as well as colour, so the distinction does not depend on colour vision. The home screen is a single screen — there is no scroll and no navigation required to act.</p>
+<p>The app is installable as a PWA with a manifest and icons, so it can live on the home screen next to the phone dialler rather than behind a browser and three taps.</p>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cs-head">
+          <span class="cs-num label">06</span>
+          <h2 class="cs-title">What I would do differently</h2>
+        </div>
+        <div class="cs-body prose">
+<p>This project ships with documented gaps, and I would rather list them than let them be discovered:</p>
+<ul>
+<li><strong>The phone numbers in the constants file are placeholders.</strong> They need replacing with verified lines from each agency before this should be relied on. That is the single most important outstanding item.</li>
+<li><strong>The facility list should expand to all twenty LGAs.</strong> Coverage is uneven and routing quality depends directly on it.</li>
+<li><strong>The dispatch endpoint acknowledges and logs.</strong> <code>POST /api/emergency</code> currently accepts an alert and records it; wiring it to a real dispatch system — an agency API or an SMS gateway — is what turns this from a demonstration into infrastructure.</li>
+<li><strong>iOS needs a 180&times;180 touch icon</strong> before it installs cleanly on an iPhone.</li>
+</ul>
+<p>The broader lesson I took from building it is about ambiguity in offline queues. A write can succeed on the server and fail on the way back, leaving the client unsure whether to retry. For an alert that triggers a dispatch, retrying twice could send two responders and not retrying could send none. No library resolves that for you — it is a product decision about which failure is worse, and it belongs written down rather than hidden in a callback.</p>
+<p>What I am proudest of is not the technical machinery. It is that the response to &ldquo;how do I get help&rdquo; became a single tap.</p>
+        </div>
+      </section>
+
+      <nav class="case-foot" aria-label="Case study navigation">
+        <a href="../portfolio.html" class="foot-side label label-ink">&larr; Back to index</a>
+        <a href="ifeoluwa-medical.html" class="foot-next">
+          <span class="label">Next case study</span>
+          <span class="foot-next-name">Ifeoluwa Medical <span aria-hidden="true">&rarr;</span></span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="colophon">
+    <div class="page">
+      <p class="signoff">Soliu Quadri</p>
+      <div class="grid mt-8">
+        <div class="c-4">
+          <p class="label">Soliu Quadri</p>
+          <p class="colophon-note">Software engineer &mdash; web &amp; mobile. Lagos, Nigeria.</p>
+          <p class="colophon-note">&copy; <span data-year>2026</span></p>
+        </div>
+        <div class="c-4">
+          <p class="label">Contact</p>
+          <ul class="colophon-list">
+            <li><a class="link" href="mailto:quadrisoliu14@gmail.com">quadrisoliu14@gmail.com</a></li>
+            <li><a class="link" href="tel:+2347054355120">+234 705 435 5120</a></li>
+          </ul>
+        </div>
+        <div class="c-4">
+          <p class="label">Elsewhere</p>
+          <ul class="colophon-list">
+            <li><a class="link" href="https://github.com/OlawaleHub" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a class="link" href="https://www.linkedin.com/in/quadri-soliu-9448bb1a6" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a class="link" href="https://twitter.com/Sulphate04" target="_blank" rel="noopener">X / Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>

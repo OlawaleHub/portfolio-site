@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notebook — Soliu Quadri</title>
+<meta name="description" content="Working notes from Soliu Quadri: what I'm learning, how I build offline-first apps, running notes from projects, and the resources I actually use.">
+<meta name="author" content="Soliu Olawale Quadri">
+<meta name="theme-color" content="#f0f0f0">
+<meta property="og:title" content="Notebook — Soliu Quadri">
+<meta property="og:description" content="Working notes: what I'm learning and how I build.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2314130f'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='54' fill='%23f0f0f0' text-anchor='middle'%3ESQ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aboreto&family=Figtree:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>
+(function(){try{var t=localStorage.getItem("sq-theme");if(t==="dark"||(!t&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.setAttribute("data-theme","dark");}}catch(e){}})();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="shell">
+  <header class="masthead-bar">
+    <div class="page">
+      <div class="bar">
+        <a href="index.html" class="wordmark">Soliu Quadri<span>.</span></a>
+        <nav class="nav" aria-label="Primary">
+          <a href="about.html" class="nav-item">About</a>
+          <a href="portfolio.html" class="nav-item">Portfolio</a>
+          <a href="notebook.html" class="nav-item">Notebook</a>
+          <a href="contact.html" class="nav-item">Contact</a>
+        </nav>
+        <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode"><span aria-hidden="true">☾</span></button>
+        <button class="burger" aria-expanded="false" aria-controls="drawer">
+          <span class="sr-only">Open menu</span>
+          <span class="bar-line" aria-hidden="true"></span>
+          <span class="bar-line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="drawer" class="drawer" inert aria-hidden="true">
+    <div class="page">
+      <a href="index.html" class="drawer-link">Home</a>
+      <a href="about.html" class="drawer-link">About</a>
+      <a href="portfolio.html" class="drawer-link">Portfolio</a>
+      <a href="notebook.html" class="drawer-link">Notebook</a>
+      <a href="contact.html" class="drawer-link">Contact</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="page">
+
+      <section class="masthead">
+        <p class="headnote label">Working notes</p>
+        <h1 class="display">Notebook</h1>
+        <p class="lead masthead-lead mt-6">What I am learning, how I build, and the running list of things I keep coming back to.</p>
+      </section>
+
+      <!-- ================= (01) currently ================= -->
+      <section class="section">
+        <header class="section-head">
+          <p class="label label-ink">(01) — Currently</p>
+          <p class="label">Updated as it changes</p>
+        </header>
+        <h2 class="title section-title">On the<br>desk</h2>
+
+        <div class="skill-groups">
+          <div>
+            <p class="label skill-head">Building</p>
+            <ul class="skill-list">
+              <li>Mobile features in Flutter &amp; Dart</li>
+              <li>Client platforms at Refcrypt Labs</li>
+              <li>Small accessibility improvements, continuously</li>
+            </ul>
+          </div>
+          <div>
+            <p class="label skill-head">Learning</p>
+            <ul class="skill-list">
+              <li>Deeper smart contract testing</li>
+              <li>App performance profiling</li>
+              <li>AI-assisted development workflows</li>
+            </ul>
+          </div>
+          <div>
+            <p class="label skill-head">Reading</p>
+            <ul class="skill-list">
+              <li>Technical documentation, mostly</li>
+              <li>Whatever the current bug requires</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= (02) how I build ================= -->
+      <section class="section">
+        <header class="section-head">
+          <p class="label label-ink">(02) — Method</p>
+          <p class="label">Offline-first, in practice</p>
+        </header>
+        <h2 class="title section-title">The offline<br>playbook</h2>
+
+        <div class="cs">
+          <div class="cs-head">
+            <span class="cs-num label">01</span>
+            <h3 class="cs-title">Assume the request will fail</h3>
+          </div>
+          <div class="cs-body prose">
+            <p>Every write in an offline-first app starts by assuming it will not reach the server. So the write goes to local storage first — in the emergency app, an IndexedDB queue — and the user gets confirmation immediately. The network is then a synchronisation problem, not a correctness problem.</p>
+            <p>The alternative, which most apps ship with, is a spinner and then an error message. That is a design decision as much as a technical one, and usually the wrong one.</p>
+          </div>
+        </div>
+
+        <div class="cs">
+          <div class="cs-head">
+            <span class="cs-num label">02</span>
+            <h3 class="cs-title">Let the service worker do the retrying</h3>
+          </div>
+          <div class="cs-body prose">
+            <p>The app shell is precached, so the interface loads with no connection at all. Queued writes are replayed on the browser's <code>sync</code> event, and also on the <code>online</code> event as a belt-and-braces fallback, because Background Sync support is not uniform across browsers.</p>
+            <p>One thing worth stating plainly: you cannot test offline mode by throttling in a tab and hoping. You have to toggle the network off properly, tap the thing, confirm it landed in the queue, and then come back online and watch it drain. If you have not watched the queue empty, you have not tested it.</p>
+          </div>
+        </div>
+
+        <div class="cs">
+          <div class="cs-head">
+            <span class="cs-num label">03</span>
+            <h3 class="cs-title">Give people a way out when sensors fail</h3>
+          </div>
+          <div class="cs-body prose">
+            <p>Geolocation is a permission prompt, and permission prompts get denied. In the emergency app, tapping a button tries GPS first, but if it is unavailable or refused, the user picks their local government area from a list of all twenty in Lagos and the nearest facility is resolved by area instead.</p>
+            <p>The lesson generalises: any feature that depends on a sensor or a permission needs a manual path beside it. The fallback is not a degraded experience — for some users it is the only experience they will ever have.</p>
+          </div>
+        </div>
+
+        <div class="cs">
+          <div class="cs-head">
+            <span class="cs-num label">04</span>
+            <h3 class="cs-title">Decide what the queue does when it is ambiguous</h3>
+          </div>
+          <div class="cs-body prose">
+            <p>A queued write can succeed on the server and fail on the way back. Now the client does not know whether to retry. For a report that triggers a dispatch, retrying twice could send two responders; not retrying could send none.</p>
+            <p>There is no clever library that resolves this for you. It has to be an explicit product decision about which failure is worse, and it has to be written down. In the emergency app that decision is documented in the README rather than buried in a callback.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= (03) lessons ================= -->
+      <section class="section">
+        <header class="section-head">
+          <p class="label label-ink">(03) — Lessons</p>
+          <p class="label">Earned the hard way</p>
+        </header>
+        <h2 class="title section-title">Things I<br>believe now</h2>
+
+        <div class="grid grid-rows">
+          <div class="c-7 start-5 prose">
+            <h3>Ship the small version</h3>
+            <p>The Lagos emergency app is deliberately one screen with three buttons. Every feature I considered adding — accounts, history, richer facility data — would have delayed the thing that matters, which is that a frightened person can get help in one tap. Scope is a safety property in some products.</p>
+
+            <h3>Write the README for yourself in six months</h3>
+            <p>Documenting the placeholder phone numbers and the unwired dispatch endpoint is not an admission of failure. It is the difference between the next person understanding the state of the system and quietly assuming it is production-ready.</p>
+
+            <h3>Tests are a form of honesty</h3>
+            <p>The governance contracts move tokens and issue refunds. Coverage there is not box-ticking; it is the only way I can credibly say a cancelled proposal will actually refund the people who paid to vote on it.</p>
+
+            <h3>Accessibility is not a phase two</h3>
+            <p>Semantic markup, keyboard navigation and contrast are cheaper to build in than to retrofit, and the people who benefit are not a niche. I would rather cut a feature than ship a form nobody can tab through.</p>
+
+            <h3>Learn in public, imperfectly</h3>
+            <p>Much of my early GitHub history is beginner CSS exercises with names like <em>Practice-on-Html</em>. I have left them up. A commit history that only shows polished work is not a history, it is a brochure.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= (04) reading list ================= -->
+      <section class="section">
+        <header class="section-head">
+          <p class="label label-ink">(04) — Reference</p>
+          <p class="label">What I actually consult</p>
+        </header>
+        <h2 class="title section-title">Go-to<br>sources</h2>
+
+        <div class="index">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps" target="_blank" rel="noopener" class="index-row">
+            <span class="index-num">01</span>
+            <span class="index-name index-name-sm">MDN — Progressive web apps</span>
+            <span class="index-desc">The reference I return to for service workers and manifest behaviour</span>
+            <span class="index-meta">MDN</span>
+            <span class="index-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://nextjs.org/docs" target="_blank" rel="noopener" class="index-row">
+            <span class="index-num">02</span>
+            <span class="index-name index-name-sm">Next.js documentation</span>
+            <span class="index-desc">App Router, caching and revalidation semantics</span>
+            <span class="index-meta">Vercel</span>
+            <span class="index-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://docs.openzeppelin.com/contracts/5.x/governance" target="_blank" rel="noopener" class="index-row">
+            <span class="index-num">03</span>
+            <span class="index-name index-name-sm">OpenZeppelin Governor</span>
+            <span class="index-desc">The governance framework the voting contracts extend</span>
+            <span class="index-meta">OpenZeppelin</span>
+            <span class="index-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://docs.flutter.dev/" target="_blank" rel="noopener" class="index-row">
+            <span class="index-num">04</span>
+            <span class="index-name index-name-sm">Flutter documentation</span>
+            <span class="index-desc">Widgets, state management and platform integration</span>
+            <span class="index-meta">Google</span>
+            <span class="index-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener" class="index-row">
+            <span class="index-num">05</span>
+            <span class="index-name index-name-sm">Core Web Vitals</span>
+            <span class="index-desc">What I measure before I claim a page is fast</span>
+            <span class="index-meta">web.dev</span>
+            <span class="index-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://www.sanity.io/docs" target="_blank" rel="noopener" class="index-row">
+            <span class="index-num">06</span>
+            <span class="index-name index-name-sm">Sanity documentation</span>
+            <span class="index-desc">Schemas, the Studio and content modelling for editors</span>
+            <span class="index-meta">Sanity</span>
+            <span class="index-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section">
+        <header class="section-head">
+          <p class="label label-ink">(05) — Next</p>
+        </header>
+        <div class="grid grid-rows">
+          <div class="c-7 start-5">
+            <h2 class="title">Curious about<br>the work?</h2>
+            <p class="lead mt-6">The case studies go into the specifics — what the problem was and what I would do differently.</p>
+            <p class="mt-8"><a class="btn" href="portfolio.html">Read the case studies</a></p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="colophon">
+    <div class="page">
+      <p class="signoff">Soliu Quadri</p>
+      <div class="grid mt-8">
+        <div class="c-4">
+          <p class="label">Soliu Quadri</p>
+          <p class="colophon-note">Software engineer — web &amp; mobile. Lagos, Nigeria.</p>
+          <p class="colophon-note">© <span data-year>2026</span></p>
+        </div>
+        <div class="c-4">
+          <p class="label">Contact</p>
+          <ul class="colophon-list">
+            <li><a class="link" href="mailto:quadrisoliu14@gmail.com">quadrisoliu14@gmail.com</a></li>
+            <li><a class="link" href="tel:+2347054355120">+234 705 435 5120</a></li>
+          </ul>
+        </div>
+        <div class="c-4">
+          <p class="label">Elsewhere</p>
+          <ul class="colophon-list">
+            <li><a class="link" href="https://github.com/OlawaleHub" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a class="link" href="https://www.linkedin.com/in/quadri-soliu-9448bb1a6" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a class="link" href="https://twitter.com/Sulphate04" target="_blank" rel="noopener">X / Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
